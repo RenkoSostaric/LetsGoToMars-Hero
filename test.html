@@ -13,12 +13,12 @@
 
 <body>
     <button class="floating-button" id="btn-up"><i class="fas fa-arrow-up" style="font-size: 1.5rem;"></i></button>
-    <div class="page home-page down" id="page-0">
+    <div class="page home-page center" id="page-0">
         <div class="select" id="kartice">
             <i class="fas fa-info"></i>
         </div>
         <img class="logo" src="assets/logo.png" alt="logo">
-        <div class="select" id="vprašanja">
+        <div class="select" id="questions">
             <i class="fas fa-question"></i>
         </div>
     </div>
@@ -27,98 +27,24 @@
     <div class="page people-page down" id="page-3"></div>
     <div class="page info-page down" id="page-4"></div>
 
-    <div class="page question-page center" id="question-page-1">
-        <div class="question-item" id="question-item-1">
-            <div class="question-box">
-                <h1 class="question-header">Cillum ex reprehenderit sint eiusmod excepteur. Enim pariatur sint tempor
-                    dolore proident pariatur ex aliqua consectetur fugiat amet tempor pariatur.</h1>
+    <div class="page questions-page category-page down" id="question-page-1"></div>
+    <div class="page questions-page question-page down" id="question-page-2"></div>
+
+    <div class="edit-form center">
+        <form action="">
+            <div class="field small-field">
+                <label for="name">Naslov:</label>
+                <input type="text" name="name" id="name" placeholder="naslov...">
             </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
+            <div class="field small-field">
+                <label for="img_src">Mesto slike:</label>
+                <input type="text" name="img_src" id="img_src" placeholder="assets/..">
             </div>
-        </div>
-        <div class="question-item" id="question-item-2">
-            <div class="question-box">
-                <h1 class="question-header">Aliquip non proident exercitation voluptate incididunt ad minim nostrud.
-                    Nisi sit sunt eiusmod amet irure nulla sit nisi ea ex.</h1>
-            </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
-            </div>
-        </div>
-        <div class="question-item" id="question-item-3">
-            <div class="question-box">
-                <h1 class="question-header">Adipisicing dolor minim eu cupidatat voluptate est proident deserunt dolore
-                    ut ad consequat dolor commodo. Esse cillum ex est amet ut.</h1>
-            </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
-            </div>
-        </div>
-        <div class="question-item" id="question-item-4">
-            <div class="question-box">
-                <h1 class="question-header">Consectetur velit aliquip in Lorem aliqua velit. Elit qui esse voluptate
-                    Lorem cupidatat voluptate laborum quis amet tempor minim ipsum commodo.</h1>
-            </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
-            </div>
-        </div>
-        <div class="question-item" id="question-item-5">
-            <div class="question-box">
-                <h1 class="question-header">Ut reprehenderit ex duis veniam do. Exercitation qui sunt nisi nisi ullamco.
-                    Qui Lorem cillum ex cillum excepteur occaecat id cupidatat minim labore consequat Lorem.</h1>
-            </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
-            </div>
-        </div>
-        <div class="question-item" id="question-item-6">
-            <div class="question-box">
-                <h1 class="question-header">Elit dolore deserunt labore ad. Laboris amet eu culpa est laboris mollit
-                    tempor deserunt elit. Consequat id aute commodo magna excepteur.</h1>
-            </div>
-            <div class="question-seperator"></div>
-            <div class="answer-box">
-                <ol>
-                    <li class="question-answer" id="answer-1">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-2">Lorem Ipsum</li>
-                    <li class="question-answer" id="answer-3">Lorem Ipsum</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <div class="page category-page down" id="question-page-1">
-        <div class="item category-item"></div>
-        <div class="item category-item"></div>
-        <div class="item category-item"></div>
-        <div class="item category-item"></div>
-        <div class="item category-item"></div>
+            <div class="field big-field">
+                <label for="info">Besedilo:</label>
+                <input type="text" name="info" id="info" placeholder="besedilo...">
+            </div>    
+        </form>
     </div>
 </body>
 
