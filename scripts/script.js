@@ -44,6 +44,12 @@ $(document).ready(function() {
         $($secondaryPage).removeClass("down");
         $($secondaryPage).addClass("center"); 
     });
+    document.querySelector("#btn-submit").addEventListener("click", function() {
+        saveEditForm();
+    });
+    document.querySelector("#btn-cancel").addEventListener("click", function() {
+        cancelEditForm();
+    });
 });
 
 function getCountries() {
@@ -125,6 +131,9 @@ function getPersonInfo(id) {
         success: function(data) {
             var page4 = document.querySelector('#page-4');
             page4.innerHTML = data;
+            document.querySelector(".edit-button").addEventListener("click", function() {
+                showEditForm();
+            });
         }
     });
 }
@@ -163,4 +172,46 @@ function getQuestions(id) {
             page2.innerHTML = data;
         }
     });
+}
+
+function showEditForm() {
+    var $primaryPage = document.querySelector("#page-4");
+    $($primaryPage).removeClass("center");
+    $($primaryPage).addClass("up");
+    document.querySelector(".edit-form").classList.remove("hidden");
+    $.ajax({
+        type: "GET",
+        url: "scripts/script.php",
+        data: { function: "getFullPersonInfo", ID_people: document.querySelector(".edit-button").getAttribute("id") },
+        dataType: "json",
+        success: function(data) {
+            console.log(data);
+            document.querySelector("#edit-form #name").value = data.name;
+            document.querySelector("#edit-form #img_src").value = data.img_src;
+            document.querySelector("#edit-form #info").value = data.text;
+        }
+    });
+};
+
+function saveEditForm() {
+    $.ajax({
+        type: "GET",
+        url: "scripts/script.php",
+        data: { function: "saveEditForm", ID_people: document.querySelector(".edit-button").getAttribute("id"), name: document.querySelector("#edit-form #name").value, img_src: document.querySelector("#edit-form #img_src").value, info: document.querySelector("#edit-form #info").value },
+        success: function(data) {
+            console.log(data);
+            cancelEditForm();
+        }
+    });
+}
+
+function cancelEditForm() {
+    var $primaryPage = document.querySelector("#page-4");
+    $($primaryPage).removeClass("up");
+    $($primaryPage).addClass("center");
+    document.querySelector("#edit-page").classList.add("hidden");
+    document.querySelector("#edit-form #name").value = "";
+    document.querySelector("#edit-form #img_src").value = "";
+    document.querySelector("#edit-form #info").value = "";
+    getPersonInfo(document.querySelector(".edit-button").getAttribute("id"));
 }

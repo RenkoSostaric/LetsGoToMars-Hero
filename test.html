@@ -30,20 +30,57 @@
     <div class="page questions-page category-page down" id="question-page-1"></div>
     <div class="page questions-page question-page down" id="question-page-2"></div>
 
-    <div class="edit-form center">
-        <form action="">
+
+    <div class="edit-form hidden" id="edit-page">
+        <form action="none" id="edit-form">
             <div class="field small-field">
                 <label for="name">Naslov:</label>
                 <input type="text" name="name" id="name" placeholder="naslov...">
             </div>
             <div class="field small-field">
                 <label for="img_src">Mesto slike:</label>
-                <input type="text" name="img_src" id="img_src" placeholder="assets/..">
+                <input type="text" name="img_src" id="img_src" placeholder="assets/drzava/kategorija/naziv.png">
             </div>
             <div class="field big-field">
                 <label for="info">Besedilo:</label>
-                <input type="text" name="info" id="info" placeholder="besedilo...">
-            </div>    
+                <textarea name="info" id="info" placeholder="vsebina..."></textarea>
+            </div>
+            <div class="btn-field">
+                <input type="button" id="btn-cancel" value="Prekliči">
+                <input type="button" id="btn-submit" value="Shrani">
+                <input type="button" id="btn-add" value="Dodaj" class="no-display">
+            </div>
+        </form>
+    </div>
+    <div class="edit-question-form edit-form" id="question-edit-page">
+        <form action="none" id="question-edit-form">
+            <div class="field small-field">
+                <label for="question">Naslov:</label>
+                <input type="text" name="question" id="question" placeholder="naslov...">
+            </div>
+            <div class="field small-field">
+                <label for="answer-1">Odgovor 1:</label>
+                <input type="text" name="answer-1" id="answer-1" placeholder="assets/drzava/kategorija/naziv.png">
+            </div>
+            <div class="field small-field">
+                <label for="answer-2">Odgovor 2:</label>
+                <input type="text" name="answer-2" id="answer-2" placeholder="assets/drzava/kategorija/naziv.png">
+            </div>
+            <div class="field small-field">
+                <label for="answer-3">Odgovor 3:</label>
+                <input type="text" name="answer-3" id="answer-3" placeholder="assets/drzava/kategorija/naziv.png">
+            </div>
+            <div class="field large-field" id="correct-answer">
+                <label>Pravilen odgovor:</label>
+                <div class="radio-field">
+                    <input type="radio" name="correct-answer-1" id="correct-answer-1">
+                    <label for="correct-answer-1">A</label>
+                    <input type="radio" name="correct-answer-2" id="correct-answer-2">
+                    <label for="correct-answer-2">B</label>
+                    <input type="radio" name="correct-answer-3" id="correct-answer-3">
+                    <label for="correct-answer-3">C</label>
+                </div>
+            </div>
         </form>
     </div>
 </body>
