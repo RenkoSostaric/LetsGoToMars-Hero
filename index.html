@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,81 +10,85 @@
     <script src="scripts/script.js"></script>
     <title>Let's Go To Mars</title>
 </head>
+
 <body>
-    <button class="floating-button"></button>
-    <div class="page country center" id="page-1">
-        <div class="item item-1">
-            <img src="assets/china-flag.png" alt="">
-            <p>Kitajska</p>
+    <button class="floating-button" id="btn-up"><i class="fas fa-arrow-up" style="font-size: 1.5rem;"></i></button>
+    <div class="page home-page center" id="page-0">
+        <div class="select" id="kartice">
+            <i class="fas fa-info"></i>
         </div>
-        <div class="item item-2">
-            <img src="assets/europe-flag.png" alt="">
-            <p>Evropa</p>
-        </div>
-        <div class="item item-3">
-            <img src="assets/india-flag.png" alt="">
-            <p>Indija</p>
-        </div>
-        <div class="item item-4">
-            <img src="assets/japan-flag.png" alt="">
-            <p>Japonska</p>
-        </div>
-        <div class="item item-5">
-            <img src="assets/russia-flag.png" alt="">
-            <p>Rusija</p>
-        </div>
-        <div class="item item-6">
-            <img src="assets/uae-flag.png" alt="">
-            <p>Združeni Arabski Emirati</p>
-        </div>
-        <div class="item item-7">
-            <img src="assets/uk-flag.png" alt="">
-            <p>Združeno kraljestvo</p>
-        </div>
-        <div class="item item-8">
-            <img src="assets/usa-flag.png" alt="">
-            <p>Združene države Amerike</p>
+        <img class="logo" src="assets/logo.png" alt="logo">
+        <div class="select" id="questions">
+            <i class="fas fa-question"></i>
         </div>
     </div>
-    <div class="page category down" id="page-2">
-        <div class="item item-1">
-            <p>Pilot</p>
-        </div>
-        <div class="item item-2">
-            <p>Politik</p>
-        </div>
-        <div class="item item-3">
-            <p>Znanstvenik</p>
-        </div>
+    <div class="page country-page down" id="page-1"></div>
+    <div class="page category-page down" id="page-2"></div>
+    <div class="page people-page down" id="page-3"></div>
+    <div class="page info-page down" id="page-4"></div>
+
+    <div class="page questions-page category-page down" id="question-page-1"></div>
+    <div class="page questions-page question-page down" id="question-page-2"></div>
+
+
+    <div class="edit-form hidden" id="edit-page">
+        <form action="none" id="edit-form">
+            <div class="field small-field">
+                <label for="name">Naslov:</label>
+                <input type="text" name="name" id="name" placeholder="naslov...">
+            </div>
+            <div class="field small-field">
+                <label for="img_src">Mesto slike:</label>
+                <input type="text" name="img_src" id="img_src" placeholder="assets/drzava/kategorija/naziv.png">
+            </div>
+            <div class="field big-field">
+                <label for="info">Besedilo:</label>
+                <textarea name="info" id="info" placeholder="vsebina..."></textarea>
+            </div>
+            <div class="btn-field">
+                <input type="button" id="btn-delete" value="Izbriši">
+                <span></span>
+                <input type="button" id="btn-cancel" value="Prekliči">
+                <input type="button" id="btn-submit" value="Shrani">
+                <input type="button" id="btn-add" value="Dodaj" class="no-display">
+            </div>
+        </form>
     </div>
-    <div class="page people down" id="page-3">
-        <div class="item item-1">
-            <img src="assets/yuri-gagarin.png" alt="">
-            <p>Yuri Gagarin</p>
-        </div>
-        <div class="item item-2">
-            <img src="assets/neil-armstrong.png" alt="">
-            <p>Neil Armstrong</p>
-        </div>
-        <div class="item item-3">
-            <img src="assets/valentina-tereshkova.png" alt="">
-            <p>Valentina Tereshkova</p>
-        </div>
-        <div class="item item-4">
-            <img src="assets/alan-shepard.png" alt="">
-            <p>Alan Shepard</p>
-        </div>
-        <div class="item item-5">
-            <img src="assets/john-glenn.png" alt="">
-            <p>John Glenn</p>
-        </div>
-    </div>
-    <div class="page info down" id="page-4">
-        <div class="info-frame">
-            <h1>Yuri Gagarin</h1>
-            <p>Culpa culpa eiusmod dolor do dolore eiusmod. Non irure mollit ipsum sunt enim. Velit sint incididunt ullamco amet nisi. Proident labore sint occaecat velit exercitation non eiusmod dolor irure ea.</p>
-            <p>Fugiat nostrud laborum occaecat ullamco veniam officia enim velit in non nisi. Sit nostrud et deserunt enim cillum. Magna eiusmod amet irure officia magna aliquip officia laborum adipisicing ullamco minim voluptate. Dolore laboris pariatur sint ad. Magna duis pariatur duis non in. Fugiat commodo nulla ea mollit qui reprehenderit in ullamco cupidatat amet commodo eu aliqua quis. Voluptate dolor eiusmod occaecat elit laboris reprehenderit amet minim non proident anim aute velit nostrud.</p>
-        </div>
+    <div class="edit-question-form edit-form hidden" id="question-edit-page">
+        <form action="none" id="question-edit-form">
+            <div class="field small-field">
+                <label for="question">Vprašanje:</label>
+                <input type="text" name="question" id="question" placeholder="vprašanje...">
+            </div>
+            <div class="field small-field">
+                <label for="answer-1">Odgovor A:</label>
+                <input type="text" name="answer-1" id="answer-1" placeholder="odgovor A...">
+            </div>
+            <div class="field small-field">
+                <label for="answer-2">Odgovor B:</label>
+                <input type="text" name="answer-2" id="answer-2" placeholder="odgovor B...">
+            </div>
+            <div class="field small-field">
+                <label for="answer-3">Odgovor C:</label>
+                <input type="text" name="answer-3" id="answer-3" placeholder="odgovor C...">
+            </div>
+            <div class="field large-field" id="correct-answer">
+                <label for="correct-answer">Pravilen odgovor:</label>
+                <div class="radio-buttons">
+                    <label><input type="radio" name="correct-answer" value="A"  id="radio-1" checked>A</label>
+                    <label><input type="radio" name="correct-answer" value="B"  id="radio-2">B</label>
+                    <label><input type="radio" name="correct-answer" value="C"  id="radio-3">C</label>
+                </div>
+            </div>
+            <div class="btn-field">
+                <input type="button" id="btn-question-delete" value="Izbriši">
+                <span></span>
+                <input type="button" id="btn-question-cancel" value="Prekliči">
+                <input type="button" id="btn-question-submit" value="Shrani">
+                <input type="button" id="btn-question-add" value="Dodaj" class="no-display">
+            </div>
+        </form>
     </div>
 </body>
+
 </html>

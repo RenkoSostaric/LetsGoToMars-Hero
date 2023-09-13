@@ -184,6 +184,7 @@ li {
 }
 
 .question-item {
+    position: relative;
     height: 400px;
     width: 250px;
     margin: 2rem;
@@ -269,12 +270,29 @@ li.correct-answer {
     transition: opacity 0.5s ease-in-out;
 }
 
-.edit-question-form .radio-field {
+.radio-buttons {
     width: 100%;
     display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
+    flex-flow: row;
+    gap: 1rem;
+}
+
+.radio-buttons input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.radio-buttons label {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .edit-form form {
@@ -418,4 +436,40 @@ input[type=reset]:active {
 
 .no-display {
     display: none;
+}
+
+.edit-question-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1.5rem;
+    background-color: #d85927;
+    border: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transform: translate(1.75rem, -1.75rem);
+    padding: 0.7rem;
+    transition: transform 0.05s ease-in-out;
+}
+
+.edit-question-button:hover {
+    color: #cacaca;
+    background-color: #c65224;
+}
+
+.edit-question-button:active {
+    color: #cacaca;
+    background-color: #c65224;
+    transform: translate(1.75rem, -1.75rem) scale(0.95); 
+}
+
+.edit-question-button i {
+    color: #ffffff;
+}
+
+span {
+    width: 200%;
 }
